@@ -1,0 +1,58 @@
+import { defineConfig } from 'vite' import react from '@vitejs/plugin-react' import tailwindcss from '@tailwindcss/vite'  // https://vite.dev/config/ export default defineConfig({   plugins: [react(), tailwindcss()], })  //tailwindcss 추가 필요
+
+
+
+
+import styled from 'styled-components';
+import './App.css'
+
+function App() {
+  return (
+    <>
+      {/* <Router /> */}
+      <div style={{ backgroundColor: "yellow" }}>
+        <Container />
+        <Container color="#ababab" rounded />
+        {/* <Container2 /> */}
+      </div>
+
+      <div className='2-dvw bg-gray-300'>
+        {/* <Container /> */}
+        <Container2 />
+        <Container2 color="bg-[#55555]" />
+        {/* <Container color="#ababab" rounded/> */}
+
+      </div>
+
+    </>
+  )
+}
+
+export default App;
+
+const Container = styled.div`
+  background-color: ${(props) => props.color || "black"};
+  padding: 28px;
+  border-radius: ${(props) => props.rounded && "32px"};
+  width: 50dvw;
+  max-width: 360px;
+  aspect-ratio: 16/9;
+
+  &:hover {
+    background-color: red;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+`;
+
+const Container2 = ({ color }) => {
+  return (
+    <div className={`${color || 'bg-blue-300'} p-5 rounded-2xl w-full max-w-[360px] aspect-video`}></div>
+  )
+}
