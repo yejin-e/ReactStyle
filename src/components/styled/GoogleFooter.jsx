@@ -19,6 +19,12 @@ const Footer = styled.footer`
   }
 `;
 
+const Hr = styled.hr`
+  background: lightgray;
+  height: 1px;
+  border: 0;
+`;
+
 
 const GoogleFooter = ({ }) => {
   return (
@@ -27,7 +33,7 @@ const GoogleFooter = ({ }) => {
         대한민국
       </div>
 
-      <hr />
+      <Hr />
 
       <div>
         <span>

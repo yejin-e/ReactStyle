@@ -1,8 +1,9 @@
+import styled from "styled-components";
 import IconCamera from "./IconCamera";
 import IconKeyboard from "./IconKeyboard";
 import IconMagnifier from "./IconMagnifier";
 import IconMic from "./IconMic";
-import styled from "styled-components";
+
 
 const Search = styled.div`
   display: flex;

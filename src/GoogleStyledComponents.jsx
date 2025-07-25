@@ -1,8 +1,8 @@
+import styled, { createGlobalStyle } from 'styled-components';
 import GoogleFooter from "./components/styled/GoogleFooter";
 import GoogleHeader from "./components/styled/GoogleHeader";
 import GoogleSearch from "./components/styled/GoogleSearch";
 import GoogleSymbol from "./components/styled/GoogleSymbol";
-import styled, { createGlobalStyle } from 'styled-components';
 
 
 const GlobalStyle = createGlobalStyle`
