@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import IconMenu from "./IconMenu";
+import IconMenu from "../icon/IconMenu";
 
 const Header = styled.header`
   display: flex;
@@ -20,7 +20,7 @@ const HeaderContents = styled.nav`
   a {
     font-weight: 500;
     text-decoration: inherit;
-  } 
+  }
 `;
 
 const Menu = styled.svg`
@@ -37,33 +37,27 @@ const Login = styled.button`
   color: white;
   padding: 10px;
   width: 90px;
+
+  &:hover {
+    background-color: red;
+  }
 `;
 
-const GoogleHeader = ({ }) => {
+const GoogleHeader = ({}) => {
   return (
     <Header>
       <HeaderContents>
-        <a>
-          Google 정보
-        </a>
-        <a>
-          스토어
-        </a>
+        <a>Google 정보</a>
+        <a>스토어</a>
       </HeaderContents>
 
       <HeaderContents>
-        <a>
-          Gmail
-        </a>
-        <a>
-          이미지
-        </a>
+        <a>Gmail</a>
+        <a>이미지</a>
         <Menu focusable="false" viewBox="0 0 24 24">
           <IconMenu />
         </Menu>
-        <Login>
-          로그인
-        </Login>
+        <Login>로그인</Login>
       </HeaderContents>
     </Header>
   );

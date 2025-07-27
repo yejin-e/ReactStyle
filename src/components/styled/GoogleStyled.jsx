@@ -1,9 +1,8 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import GoogleFooter from "./components/styled/GoogleFooter";
-import GoogleHeader from "./components/styled/GoogleHeader";
-import GoogleSearch from "./components/styled/GoogleSearch";
-import GoogleSymbol from "./components/styled/GoogleSymbol";
-
+import styled, { createGlobalStyle } from "styled-components";
+import GoogleFooter from "./GoogleFooter";
+import GoogleHeader from "./GoogleHeader";
+import GoogleSearch from "./GoogleSearch";
+import GoogleSymbol from "../icon/GoogleSymbol";
 
 const GlobalStyle = createGlobalStyle`
   #root {
@@ -37,7 +36,7 @@ const Screen = styled.div`
   flex-direction: column;
   height: 100dvh;
   width: 100dvw;
-`; 
+`;
 
 const Google = styled.div`
   display: flex;
@@ -58,7 +57,7 @@ const Tag = styled.div`
 const Contents = styled.div`
   background-color: whitesmoke;
   padding: 10px;
-`; 
+`;
 
 const Main = styled.main`
   display: flex;
@@ -67,18 +66,22 @@ const Main = styled.main`
   align-items: center;
 `;
 
-
-const GoogleStyledComponents = () => {
+const GoogleStyled = () => {
   return (
     <>
       <GlobalStyle />
-      
+
       <Screen>
         <GoogleHeader />
 
         <Main>
           <Google>
-            <svg height="92" viewBox="0 0 272 92" width="272" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              height="92"
+              viewBox="0 0 272 92"
+              width="272"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <GoogleSymbol />
             </svg>
           </Google>
@@ -86,19 +89,15 @@ const GoogleStyledComponents = () => {
           <GoogleSearch />
 
           <Tag>
-            <Contents>
-              Google 검색
-            </Contents>
-            <Contents>
-              I'm Feeling Lucky
-            </Contents>
+            <Contents>Google 검색</Contents>
+            <Contents>I'm Feeling Lucky</Contents>
           </Tag>
         </Main>
 
         <GoogleFooter />
       </Screen>
     </>
-  )
+  );
 };
 
-export default GoogleStyledComponents;
+export default GoogleStyled;
