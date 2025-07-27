@@ -1,9 +1,9 @@
 const CheckBox = ({ index: checkIndex, checkBoxClick, state }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center items-center">
       <input
         type="checkbox"
-        className="h-full aspect-square"
+        className="h-10 aspect-square"
         checked={state}
         onClick={() => checkBoxClick(checkIndex)}
       />

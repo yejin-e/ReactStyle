@@ -4,7 +4,7 @@ import Item from "./Item";
 
 const List = ({ todos, checkBoxClick, deleteClick }) => {
   return (
-    <div className="flex flex-col flex-1 w-full gap-1">
+    <div className="flex flex-col flex-1 w-full gap-3">
       {todos.map((todo, index) => {
         return (
           <div className="flex flex-row gap-3" key={index}>
